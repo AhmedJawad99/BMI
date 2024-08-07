@@ -1,4 +1,5 @@
 import 'package:bmi/home.dart';
+import 'package:bmi/results.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +13,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        title: 'Body Mass Index',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.teal,
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.teal,
+              centerTitle: true,
+              titleTextStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold)),
+          scaffoldBackgroundColor: Colors.black,
+          textTheme: const TextTheme(
+            labelMedium: TextStyle(
+                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
+            labelLarge: TextStyle(
+                fontSize: 45, fontWeight: FontWeight.w800, color: Colors.white),
+          ),
+          iconTheme: const IconThemeData(color: Colors.white, size: 90),
+        ),
+        home: const MyHomePage(
+          title: 'Body Mass Index',
+        ));
   }
 }
